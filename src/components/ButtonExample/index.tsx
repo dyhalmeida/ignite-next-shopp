@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, PropsWithChildren } from "react";
 import { styled } from "../../styles";
 
 const Button = styled('button', {
-  backgroundColor: '$primary',
+  backgroundColor: '$green300',
   border: 'none',
   borderRadius: 8,
   padding: '4px 8px',
