@@ -13,7 +13,7 @@ export default async function handle(request: NextApiRequest, response: NextApiR
   }
 
   const checkoutSession = await stripe.checkout.sessions.create({
-    success_url: `${process.env.NEXT_URL}/success`,
+    success_url: `${process.env.NEXT_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${process.env.NEXT_URL}/product/${product.id}`,
     mode: 'payment',
     line_items: [
